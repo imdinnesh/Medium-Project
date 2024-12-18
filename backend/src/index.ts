@@ -1,4 +1,5 @@
 import { Hono } from 'hono';
+import { cors } from 'hono/cors';
 
 import { userRouter } from './routes/user';
 import { blogRouter } from './routes/blog';
@@ -10,6 +11,9 @@ export const app = new Hono<{
       JWT_SECRET: string;
   }
 }>();
+
+// Add CORS middleware
+app.use('/*', cors());
 
 
 
