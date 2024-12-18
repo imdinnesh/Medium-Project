@@ -1,0 +1,4 @@
+backend/wrangler.toml
+backend/.env
+backend/dist
+common/dist
